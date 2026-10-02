@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-02T12:46:33.517611+00:00",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "max",
+  "codex_cli": "codex-cli 0.160.0",
+  "platform": "Linux",
+  "python": "3.14.7",
+  "node": "v26.10.0",
+  "skill_sha256": "a34caeff48d33c9b35e003ee3411b61f4ba8f434157c26ea64f0a69be30f0e0b",
+  "trust_mode": "hook-trust bypass for reviewed local plugin in isolated automation",
+  "sessions": [
+    {
+      "fresh_session": 1,
+      "root_body_copies_before_model_output": 1,
+      "model_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "effort": "max"
+        }
+      ],
+      "exit_code": 0,
+      "answer": "{\"answer\":323}",
+      "latency_ms": 5778,
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/tmp\" (codex_home: AbsolutePathBuf(\"<temporary>/codex\"))\n",
+      "pass": true
+    },
+    {
+      "fresh_session": 2,
+      "root_body_copies_before_model_output": 1,
+      "model_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "effort": "max"
+        }
+      ],
+      "exit_code": 0,
+      "answer": "{\"answer\":323}",
+      "latency_ms": 7151,
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/tmp\" (codex_home: AbsolutePathBuf(\"<temporary>/codex\"))\n",
+      "pass": true
+    },
+    {
+      "fresh_session": 3,
+      "root_body_copies_before_model_output": 1,
+      "model_contexts": [
+        {
+          "model": "gpt-6-luna",
+          "effort": "max"
+        }
+      ],
+      "exit_code": 0,
+      "answer": "{\"answer\":323}",
+      "latency_ms": 5443,
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"/tmp\" (codex_home: AbsolutePathBuf(\"<temporary>/codex\"))\n",
+      "pass": true
+    }
+  ]
+}

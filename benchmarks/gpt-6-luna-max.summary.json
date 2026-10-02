@@ -1,0 +1,3496 @@
+{
+  "metadata": {
+    "type": "metadata",
+    "started_at": "2026-10-02T12:36:50.148464+00:00",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "codex_cli": "codex-cli 0.160.0",
+    "root_commit": "fcddb62c745a2e67771046dd219ee67807570e56",
+    "task_count": 24,
+    "trials_per_condition": 3,
+    "max_concurrent_calls": 4,
+    "timeout_seconds_per_turn": 600,
+    "schedule_seed": 20261002,
+    "tasks_sha256": "2a097863bf3bdcb85718da46ae27bdafc4f204b2ecbfc5d23134e8242abc7ffb",
+    "runner_sha256": "ddf1a68489cae31dfbc41131f306aa4e0c1d0d4b045684b9c2fe9c405e56d6c9",
+    "skill_sha256": "a34caeff48d33c9b35e003ee3411b61f4ba8f434157c26ea64f0a69be30f0e0b",
+    "body_sha256": "117ff70e435794d275303302732fd9dae48021829c00b9c3c3ced8aa3c7024d3",
+    "body_bytes": 5631,
+    "loading_path": "native project AGENTS.md; fresh isolated CODEX_HOME for each session",
+    "tool_access": "web disabled; shell disabled; no skills catalog, plugins, apps or memories",
+    "retries": 0,
+    "primary_metric": "all required fields/code cases correct; errors count as failures",
+    "schedule": [
+      {
+        "task_id": "shared-failure",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "post-treatment",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "retain-revision",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "bound-optimum",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "apportion-code",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "queue-tail",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-rate",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "non-identifiable",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "window-code",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "value-information",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "retain-rate",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "non-identifiable",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "merge-code",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "one-time-work",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "serial-dependency",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "window-code",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "screening",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "post-treatment",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "bound-optimum",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-revision",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "stratified-rates",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "post-treatment",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "missing-denominator",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "no-feasible",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "hard-gates",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "one-time-work",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "missing-denominator",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "one-time-work",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "critical-path",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "direct-format",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "critical-path",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "alias-code",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "value-information",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "shared-failure",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "queue-tail",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "regret",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "direct-number",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "screening",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "alias-code",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "apportion-code",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "direct-number",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "duplicate-origin",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "no-feasible",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "post-treatment",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "bound-optimum",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-revision",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "alias-code",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "regret",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "value-information",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "direct-number",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "window-code",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "direct-format",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "critical-path",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "no-feasible",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "direct-format",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "value-information",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "missing-denominator",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "non-identifiable",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "direct-number",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "serial-dependency",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "apportion-code",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "missing-denominator",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "shared-failure",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "critical-path",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "queue-tail",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "duplicate-origin",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "apportion-code",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "bound-optimum",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "no-feasible",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "hard-gates",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "shared-failure",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "alias-code",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "regret",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "alias-code",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "stratified-rates",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "screening",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-rate",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "direct-format",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "duplicate-origin",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "stratified-rates",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "hard-gates",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "apportion-code",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "regret",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "stratified-rates",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "value-information",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "serial-dependency",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "screening",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "merge-code",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "window-code",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "screening",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "duplicate-origin",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "hard-gates",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-rate",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-revision",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "hard-gates",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "duplicate-origin",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "serial-dependency",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "regret",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "merge-code",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "missing-denominator",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "serial-dependency",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-revision",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "merge-code",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "regret",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "no-feasible",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "no-feasible",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "non-identifiable",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "post-treatment",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "direct-format",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "queue-tail",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "duplicate-origin",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "queue-tail",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "value-information",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "critical-path",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "direct-number",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "window-code",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "alias-code",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "retain-rate",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "non-identifiable",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "screening",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "merge-code",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "stratified-rates",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "critical-path",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "retain-rate",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "serial-dependency",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "queue-tail",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "one-time-work",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "merge-code",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "missing-denominator",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "hard-gates",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "window-code",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "stratified-rates",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "one-time-work",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "direct-number",
+        "trial": 2,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "one-time-work",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "non-identifiable",
+        "trial": 2,
+        "condition": "root"
+      },
+      {
+        "task_id": "direct-format",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "post-treatment",
+        "trial": 3,
+        "condition": "root"
+      },
+      {
+        "task_id": "bound-optimum",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "apportion-code",
+        "trial": 1,
+        "condition": "root"
+      },
+      {
+        "task_id": "bound-optimum",
+        "trial": 3,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "retain-revision",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "shared-failure",
+        "trial": 1,
+        "condition": "baseline"
+      },
+      {
+        "task_id": "shared-failure",
+        "trial": 3,
+        "condition": "root"
+      }
+    ]
+  },
+  "conditions": {
+    "baseline": {
+      "sessions": 72,
+      "errors": 0,
+      "passed": 69,
+      "pass_rate": 0.9583333333333334,
+      "median_latency_seconds": 7.96,
+      "mean_session_tokens": {
+        "input_tokens": 9520.666666666666,
+        "cached_input_tokens": 7178.666666666667,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 140.72222222222223,
+        "reasoning_output_tokens": 100.95833333333333
+      },
+      "categories": {
+        "cause": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "code": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "constraints": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "decision": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "direct": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "uncertainty": {
+          "passed": 9,
+          "sessions": 12
+        }
+      }
+    },
+    "root": {
+      "sessions": 72,
+      "errors": 0,
+      "passed": 71,
+      "pass_rate": 0.9861111111111112,
+      "median_latency_seconds": 8.5435,
+      "mean_session_tokens": {
+        "input_tokens": 10671.263888888889,
+        "cached_input_tokens": 7466.666666666667,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 164,
+        "reasoning_output_tokens": 122.56944444444444
+      },
+      "categories": {
+        "cause": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "code": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "constraints": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "decision": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "direct": {
+          "passed": 12,
+          "sessions": 12
+        },
+        "uncertainty": {
+          "passed": 11,
+          "sessions": 12
+        }
+      }
+    }
+  },
+  "paired_sessions": {
+    "root_wins": 2,
+    "root_losses": 0,
+    "ties": 70
+  },
+  "pass_rate_difference_root_minus_baseline": 0.027777777777777776,
+  "task_cluster_bootstrap_95_percent_interval": [
+    0,
+    0.08333333333333333
+  ],
+  "base_instructions_consistent": true,
+  "common_developer_instructions_consistent": true,
+  "base_instructions_sha256": [
+    "cdea0bc7bee2a97472a1833662a04b96eea86d2b9cb62d68a027c79f529d43a0"
+  ],
+  "scoring_runner_sha256": "65f35e230e8e3279a533df5edaecb4a52894bc9fbae3d3e88357cc5e01ad7f18",
+  "grading_rules": {
+    "numeric_relative_tolerance": 0.001,
+    "numeric_absolute_tolerance": 1e-06,
+    "allowed_divmod_and_type": true
+  },
+  "changed_grades": [
+    {
+      "task_id": "queue-tail",
+      "trial": 1,
+      "condition": "root",
+      "original": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "choice": true,
+          "p95_seconds": false
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 1,
+      "condition": "baseline",
+      "original": {
+        "pass": false,
+        "fraction": 0.04672897196261682,
+        "code_cases": {
+          "passed": 5,
+          "total": 107,
+          "failed_case_indices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+          ]
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 3,
+      "condition": "root",
+      "original": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "choice": true,
+          "p95_seconds": false
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 2,
+      "condition": "root",
+      "original": {
+        "pass": false,
+        "fraction": 0.04672897196261682,
+        "code_cases": {
+          "passed": 5,
+          "total": 107,
+          "failed_case_indices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+          ]
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 3,
+      "condition": "baseline",
+      "original": {
+        "pass": false,
+        "fraction": 0.0,
+        "code_cases": {
+          "passed": 0,
+          "total": 107,
+          "failed_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+          ]
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 2,
+      "condition": "baseline",
+      "original": {
+        "pass": false,
+        "fraction": 0.04672897196261682,
+        "code_cases": {
+          "passed": 5,
+          "total": 107,
+          "failed_case_indices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+          ]
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 1,
+      "condition": "baseline",
+      "original": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "choice": true,
+          "p95_seconds": false
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 2,
+      "condition": "root",
+      "original": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "choice": true,
+          "p95_seconds": false
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "screening",
+      "trial": 2,
+      "condition": "root",
+      "original": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "posterior": false,
+          "choice": true
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "posterior": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 1,
+      "condition": "root",
+      "original": {
+        "pass": false,
+        "fraction": 0.04672897196261682,
+        "code_cases": {
+          "passed": 5,
+          "total": 107,
+          "failed_case_indices": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106
+          ]
+        }
+      },
+      "corrected": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    }
+  ],
+  "response_grades": [
+    {
+      "task_id": "shared-failure",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_fail_probability": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "post-treatment",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "identifies_overall": true,
+          "population": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-revision",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "bound-optimum",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "optimality_proved": true,
+          "additive_gap": true,
+          "max_ratio": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-rate",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "non-identifiable",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_unique": true,
+          "b": true,
+          "identified_slope": true
+        }
+      }
+    },
+    {
+      "task_id": "window-code",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "value-information",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "without": true,
+          "with": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-rate",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "non-identifiable",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_unique": true,
+          "b": true,
+          "identified_slope": true
+        }
+      }
+    },
+    {
+      "task_id": "merge-code",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "one-time-work",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "serial-dependency",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "minimum_minutes": true
+        }
+      }
+    },
+    {
+      "task_id": "window-code",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "screening",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "posterior": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "post-treatment",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "identifies_overall": true,
+          "population": true
+        }
+      }
+    },
+    {
+      "task_id": "bound-optimum",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "optimality_proved": true,
+          "additive_gap": true,
+          "max_ratio": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-revision",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "stratified-rates",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "a_rate": true,
+          "b_rate": true
+        }
+      }
+    },
+    {
+      "task_id": "post-treatment",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "identifies_overall": true,
+          "population": true
+        }
+      }
+    },
+    {
+      "task_id": "missing-denominator",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "established": true,
+          "missing": true
+        }
+      }
+    },
+    {
+      "task_id": "no-feasible",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "task_id": "hard-gates",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "cost": true
+        }
+      }
+    },
+    {
+      "task_id": "one-time-work",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "missing-denominator",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "established": true,
+          "missing": false
+        }
+      }
+    },
+    {
+      "task_id": "one-time-work",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "critical-path",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "current_ms": true,
+          "x_ms": true,
+          "y_ms": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-format",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "critical-path",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "current_ms": true,
+          "x_ms": true,
+          "y_ms": true
+        }
+      }
+    },
+    {
+      "task_id": "alias-code",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 104,
+          "total": 104,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "value-information",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "without": true,
+          "with": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "shared-failure",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_fail_probability": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "regret",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "max_regrets": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-number",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "screening",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "posterior": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "alias-code",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 104,
+          "total": 104,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "direct-number",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "duplicate-origin",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "independent_origins": true,
+          "established": true
+        }
+      }
+    },
+    {
+      "task_id": "no-feasible",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "task_id": "post-treatment",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "identifies_overall": true,
+          "population": true
+        }
+      }
+    },
+    {
+      "task_id": "bound-optimum",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "optimality_proved": true,
+          "additive_gap": true,
+          "max_ratio": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-revision",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "alias-code",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 104,
+          "total": 104,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "regret",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "max_regrets": true
+        }
+      }
+    },
+    {
+      "task_id": "value-information",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "without": true,
+          "with": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-number",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "window-code",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "direct-format",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "critical-path",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "current_ms": true,
+          "x_ms": true,
+          "y_ms": true
+        }
+      }
+    },
+    {
+      "task_id": "no-feasible",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-format",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "value-information",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "without": true,
+          "with": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "missing-denominator",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "established": true,
+          "missing": false
+        }
+      }
+    },
+    {
+      "task_id": "non-identifiable",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_unique": true,
+          "b": true,
+          "identified_slope": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-number",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "serial-dependency",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "minimum_minutes": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "missing-denominator",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "established": true,
+          "missing": false
+        }
+      }
+    },
+    {
+      "task_id": "shared-failure",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_fail_probability": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "critical-path",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "current_ms": true,
+          "x_ms": true,
+          "y_ms": true
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "duplicate-origin",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "independent_origins": true,
+          "established": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "bound-optimum",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "optimality_proved": true,
+          "additive_gap": true,
+          "max_ratio": true
+        }
+      }
+    },
+    {
+      "task_id": "no-feasible",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "task_id": "hard-gates",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "cost": true
+        }
+      }
+    },
+    {
+      "task_id": "shared-failure",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_fail_probability": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "alias-code",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 104,
+          "total": 104,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "regret",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "max_regrets": true
+        }
+      }
+    },
+    {
+      "task_id": "alias-code",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 104,
+          "total": 104,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "stratified-rates",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "a_rate": true,
+          "b_rate": true
+        }
+      }
+    },
+    {
+      "task_id": "screening",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "posterior": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-rate",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-format",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "duplicate-origin",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "independent_origins": true,
+          "established": true
+        }
+      }
+    },
+    {
+      "task_id": "stratified-rates",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "a_rate": true,
+          "b_rate": true
+        }
+      }
+    },
+    {
+      "task_id": "hard-gates",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "cost": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "regret",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "max_regrets": true
+        }
+      }
+    },
+    {
+      "task_id": "stratified-rates",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "a_rate": true,
+          "b_rate": true
+        }
+      }
+    },
+    {
+      "task_id": "value-information",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "without": true,
+          "with": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "serial-dependency",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "minimum_minutes": true
+        }
+      }
+    },
+    {
+      "task_id": "screening",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "posterior": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "merge-code",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "window-code",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "screening",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "posterior": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "duplicate-origin",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "independent_origins": true,
+          "established": true
+        }
+      }
+    },
+    {
+      "task_id": "hard-gates",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "cost": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-rate",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-revision",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "hard-gates",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "cost": true
+        }
+      }
+    },
+    {
+      "task_id": "duplicate-origin",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "independent_origins": true,
+          "established": true
+        }
+      }
+    },
+    {
+      "task_id": "serial-dependency",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "minimum_minutes": true
+        }
+      }
+    },
+    {
+      "task_id": "regret",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "max_regrets": true
+        }
+      }
+    },
+    {
+      "task_id": "merge-code",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "missing-denominator",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "established": true,
+          "missing": true
+        }
+      }
+    },
+    {
+      "task_id": "serial-dependency",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "minimum_minutes": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-revision",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "merge-code",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "regret",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "max_regrets": true
+        }
+      }
+    },
+    {
+      "task_id": "no-feasible",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "task_id": "no-feasible",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "feasible": true
+        }
+      }
+    },
+    {
+      "task_id": "non-identifiable",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_unique": true,
+          "b": true,
+          "identified_slope": true
+        }
+      }
+    },
+    {
+      "task_id": "post-treatment",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "identifies_overall": true,
+          "population": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-format",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "duplicate-origin",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "independent_origins": true,
+          "established": true
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "value-information",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "without": true,
+          "with": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "critical-path",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "current_ms": true,
+          "x_ms": true,
+          "y_ms": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-number",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "window-code",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "alias-code",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 104,
+          "total": 104,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "retain-rate",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "non-identifiable",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_unique": true,
+          "b": true,
+          "identified_slope": true
+        }
+      }
+    },
+    {
+      "task_id": "screening",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "posterior": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "merge-code",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "stratified-rates",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "a_rate": true,
+          "b_rate": true
+        }
+      }
+    },
+    {
+      "task_id": "critical-path",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "current_ms": true,
+          "x_ms": true,
+          "y_ms": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-rate",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "serial-dependency",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "minimum_minutes": true
+        }
+      }
+    },
+    {
+      "task_id": "queue-tail",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "p95_seconds": true
+        }
+      }
+    },
+    {
+      "task_id": "one-time-work",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "merge-code",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "missing-denominator",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": false,
+        "fraction": 0.5,
+        "checks": {
+          "established": true,
+          "missing": false
+        }
+      }
+    },
+    {
+      "task_id": "hard-gates",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "cost": true
+        }
+      }
+    },
+    {
+      "task_id": "window-code",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 105,
+          "total": 105,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "stratified-rates",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true,
+          "a_rate": true,
+          "b_rate": true
+        }
+      }
+    },
+    {
+      "task_id": "one-time-work",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-number",
+      "trial": 2,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "one-time-work",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "non-identifiable",
+      "trial": 2,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_unique": true,
+          "b": true,
+          "identified_slope": true
+        }
+      }
+    },
+    {
+      "task_id": "direct-format",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "post-treatment",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "identifies_overall": true,
+          "population": true
+        }
+      }
+    },
+    {
+      "task_id": "bound-optimum",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "optimality_proved": true,
+          "additive_gap": true,
+          "max_ratio": true
+        }
+      }
+    },
+    {
+      "task_id": "apportion-code",
+      "trial": 1,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "code_cases": {
+          "passed": 107,
+          "total": 107,
+          "failed_case_indices": []
+        }
+      }
+    },
+    {
+      "task_id": "bound-optimum",
+      "trial": 3,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "optimality_proved": true,
+          "additive_gap": true,
+          "max_ratio": true
+        }
+      }
+    },
+    {
+      "task_id": "retain-revision",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "answer": true
+        }
+      }
+    },
+    {
+      "task_id": "shared-failure",
+      "trial": 1,
+      "condition": "baseline",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_fail_probability": true,
+          "choice": true
+        }
+      }
+    },
+    {
+      "task_id": "shared-failure",
+      "trial": 3,
+      "condition": "root",
+      "grade": {
+        "pass": true,
+        "fraction": 1.0,
+        "checks": {
+          "both_fail_probability": true,
+          "choice": true
+        }
+      }
+    }
+  ],
+  "raw_responses_sha256": "bef8348708688d658a05fddb044fffca6ce4f068add29a3d7b9cc8149ceae03e"
+}

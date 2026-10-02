@@ -189,11 +189,49 @@ root is active. File limits still apply. For example, Codex defaults to a 32 KiB
 combined project instruction limit. Supply `python3 install.py print` to a custom
 worker or API session that does not inherit root through its host.
 
-**Verification status:** Paths and plugin contracts were researched from official
-documentation on 2026-10-01 and 2026-10-02. Codex CLI 0.160.0's plugin reader
-detects both startup hooks in version 0.1.1. The runnable checks have not been
-executed. Fresh-session delivery, Windows behavior, and reasoning gains remain unverified.
-Root does not claim universal optimality or measured improvement.
+**Verification status:** Linux checks passed for all seven installer targets,
+the shared context hooks, the OpenCode adapter, and all six package formats on
+2026-10-02. Codex CLI 0.160.0 delivered one root body in each of 72 native
+benchmark sessions and three fresh plugin checks. Plugin checks used an explicit
+hook-trust bypass for the reviewed local plugin in isolated automation.
+Other clients, Windows, macOS, compaction, and live worker startup remain unchecked.
+
+## Benchmarks
+
+**GPT-6 Luna · `max` effort · 2026-10-02 · root 0.1.1**
+
+A fixed suite ran 24 tasks three times per condition: **144 fresh sessions**
+and **156 model turns**. Baseline and root used separate temporary workspaces
+and Codex settings. Every turn's session record confirmed the model and effort.
+
+| Measure | Baseline | With root |
+| --- | ---: | ---: |
+| Fully correct sessions | 69/72 (95.8%) | 71/72 (98.6%) |
+| Median session time | 7.96 s | 8.54 s |
+| Mean input tokens per session | 9,521 | 10,671 |
+| Mean output tokens per session, including reasoning | 141 | 164 |
+
+Paired results: **2 root wins, 0 losses, 70 ties**. All numerical and code checks
+passed in both conditions. The failed sessions used `request_count for each option`
+where the required label was `request_count`: three baseline failures and one
+root failure. The run does **not establish a reasoning gain**. The observed pass
+rate difference was +2.8 percentage points; the task-level 95% bootstrap interval
+was 0 to +8.3 points. Root added a median **1,062 input tokens** on first turns.
+
+The suite covers cause tracing, decisions, constraints, uncertainty, executable
+Python answers, direct tasks, and two-turn retention. It is small and authored
+for this project. Timing includes service effects. These results do not measure
+long sessions, tool-using coding work, other models, or other clients.
+
+The initial grader had two errors: it rejected normal rounding and omitted
+Python built-ins used by valid answers. Both conditions were rescored with the
+same corrected checks. Original answers and grades remain available.
+
+[Method and commands](benchmarks/README.md) ·
+[Tasks](benchmarks/tasks.json) ·
+[Raw responses](benchmarks/gpt-6-luna-max.jsonl) ·
+[Scores and corrections](benchmarks/gpt-6-luna-max.summary.json) ·
+[Plugin loading evidence](benchmarks/loading.json)
 
 ## Update or remove
 

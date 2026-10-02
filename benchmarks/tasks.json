@@ -1,0 +1,261 @@
+[
+  {
+    "id": "stratified-rates",
+    "category": "cause",
+    "turns": [
+      "A treatment comparison has these successes / total: A: mild 81/90, severe 2/10; B: mild 19/20, severe 24/80. The target population is 50% mild and 50% severe. Assume the within-stratum rates transport unchanged. Choose A or B for target success rate; calculate both standardized rates. This is descriptive, not proof of a causal treatment effect.\nReturn only one JSON object. Required fields: choice (JSON string), a_rate (JSON number), b_rate (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "B",
+      "a_rate": 0.55,
+      "b_rate": 0.625
+    }
+  },
+  {
+    "id": "queue-tail",
+    "category": "cause",
+    "turns": [
+      "For this task assume a stationary M/M/1 queue, arrival rate 90/s, service rate 100/s, and P(response time > t)=exp(-(service-arrival)*t). The target p95 response time is at most 0.2s. Options: X doubles application instances but leaves this queue unchanged, Y increases service rate to 110/s, Z reduces arrival rate to 87/s. Choose the only feasible option. Calculate its p95 in seconds.\nReturn only one JSON object. Required fields: choice (JSON string), p95_seconds (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "Y",
+      "p95_seconds": 0.1497866137
+    }
+  },
+  {
+    "id": "critical-path",
+    "category": "cause",
+    "turns": [
+      "A request completes when parallel branches finish. Branch A is upload 900ms then metadata 100ms; B is DB query 400ms then serialization 100ms. Option X removes the DB query cost entirely. Option Y halves upload time. No other times change. Choose the faster option; give current, X, and Y response time in ms.\nReturn only one JSON object. Required fields: choice (JSON string), current_ms (JSON number), x_ms (JSON number), y_ms (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "Y",
+      "current_ms": 1000,
+      "x_ms": 1000,
+      "y_ms": 550
+    }
+  },
+  {
+    "id": "post-treatment",
+    "category": "cause",
+    "turns": [
+      "A randomized service trial assigns A or B. A improves overall success, but also keeps more difficult users engaged. An analyst discards users who disengage, then finds B has higher success among retained users. Decide whether the retained-only comparison identifies the overall causal effect of assignment. Answer yes or no. Select the appropriate analysis population from retained_only or all_randomized.\nReturn only one JSON object. Required fields: identifies_overall (JSON string), population (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "identifies_overall": "no",
+      "population": "all_randomized"
+    }
+  },
+  {
+    "id": "screening",
+    "category": "decision",
+    "turns": [
+      "Disease prevalence is 0.001. A test has sensitivity 0.99 and false positive rate 0.02. Tests are conditionally independent given disease status. A person tests positive twice. Calculate disease probability after two positives. Choose treat if posterior >=0.5, otherwise confirm.\nReturn only one JSON object. Required fields: posterior (JSON number), choice (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "posterior": 0.7103718199608611,
+      "choice": "treat"
+    }
+  },
+  {
+    "id": "regret",
+    "category": "decision",
+    "turns": [
+      "Losses in states S1,S2,S3 are: A=(0,30,70), B=(20,25,40), C=(50,20,0). Probabilities are unknown. Choose the unique minimax-regret action, where regret is loss minus the lowest loss in the same state. Give maximum regret for A,B,C.\nReturn only one JSON object. Required fields: choice (JSON string), max_regrets (JSON array of numbers). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "B",
+      "max_regrets": [
+        70,
+        40,
+        50
+      ]
+    }
+  },
+  {
+    "id": "shared-failure",
+    "category": "decision",
+    "turns": [
+      "Two redundant components each fail with probability 0.01. With probability 0.008, a common cause fails both. Outside that common-cause event their failures are independent with the same conditional probability q, chosen to preserve each marginal 0.01. Compute probability both fail. Choose meets if this is <=0.0002, otherwise fails.\nReturn only one JSON object. Required fields: both_fail_probability (JSON number), choice (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "both_fail_probability": 0.008004032258064515,
+      "choice": "fails"
+    }
+  },
+  {
+    "id": "value-information",
+    "category": "decision",
+    "turns": [
+      "Two actions have losses in states hot,cold: A=(0,100), B=(40,40). P(hot)=0.3. A perfect state observation can be bought for cost 15, added to loss. Compute best expected loss without the observation and with it, including observation cost. Choose buy or skip.\nReturn only one JSON object. Required fields: without (JSON number), with (JSON number), choice (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "without": 40,
+      "with": 43,
+      "choice": "skip"
+    }
+  },
+  {
+    "id": "hard-gates",
+    "category": "constraints",
+    "turns": [
+      "Choose a plan that MUST have p99 <=100ms and maintain an audit record for every write. Among feasible plans minimize monthly cost. P: 90ms, audit yes, cost120. Q:70ms, audit no, cost30. R:110ms, audit yes, cost40. S:95ms, audit yes, cost80. Give chosen label and cost.\nReturn only one JSON object. Required fields: choice (JSON string), cost (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "S",
+      "cost": 80
+    }
+  },
+  {
+    "id": "no-feasible",
+    "category": "constraints",
+    "turns": [
+      "A release must use zero network connections and serve live exchange rates that change outside the machine. No rates are preloaded; no external input is permitted. Choices: A fetch an API; B invent a rate; C use a month-old cache; none if no choice meets both requirements. Choose one. State whether the two stated requirements are jointly feasible under these facts: yes or no.\nReturn only one JSON object. Required fields: choice (JSON string), feasible (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "none",
+      "feasible": "no"
+    }
+  },
+  {
+    "id": "serial-dependency",
+    "category": "constraints",
+    "turns": [
+      "A one-time maintenance must finish in <=70 minutes. A exports in 25min and must finish before B imports for 30min. C validates for 20min and must wait for B. Proposed plan P runs A and B in parallel then C. Plan Q runs A then B then C. Both must preserve the dependency requirements. Choose P,Q,or none and give the minimum valid duration.\nReturn only one JSON object. Required fields: choice (JSON string), minimum_minutes (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "none",
+      "minimum_minutes": 75
+    }
+  },
+  {
+    "id": "one-time-work",
+    "category": "constraints",
+    "turns": [
+      "Twenty local text files require a one-time deterministic replacement. They are <=1MiB each. The user requires an auditable diff and no new dependency or service. Options: A build and host an AI file service; B use an existing standard-library replacement script and inspect the diff; C manually retype each file without a diff. Choose the only option that meets every requirement.\nReturn only one JSON object. Required fields: choice (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "choice": "B"
+    }
+  },
+  {
+    "id": "missing-denominator",
+    "category": "uncertainty",
+    "turns": [
+      "A report says option A had 12 errors and option B had 5 errors. It gives no request counts, assignment procedure, or exposure time. Is a lower error rate for B established? Answer yes or no. What single missing numerical quantity is needed for each option to calculate error rate? Use request_count or cpu_usage.\nReturn only one JSON object. Required fields: established (JSON string), missing (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "established": "no",
+      "missing": "request_count"
+    }
+  },
+  {
+    "id": "non-identifiable",
+    "category": "uncertainty",
+    "turns": [
+      "Sensor observations obey y=a*x+b. All observed x are zero, and all observed y are 7. Exact noise-free data. Are a and b both uniquely determined? Answer yes or no. Give b. Select identified_slope from unique or undetermined.\nReturn only one JSON object. Required fields: both_unique (JSON string), b (JSON number), identified_slope (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "both_unique": "no",
+      "b": 7,
+      "identified_slope": "undetermined"
+    }
+  },
+  {
+    "id": "duplicate-origin",
+    "category": "uncertainty",
+    "turns": [
+      "Five blogs repeat the same unsourced press release. No blog ran a test or has another source. Count independent origins of the claim in this evidence. Does repetition alone establish the claim true? Answer yes or no.\nReturn only one JSON object. Required fields: independent_origins (JSON number), established (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "independent_origins": 1,
+      "established": "no"
+    }
+  },
+  {
+    "id": "bound-optimum",
+    "category": "uncertainty",
+    "turns": [
+      "A minimization solver finds a feasible solution of cost 104 and proves a valid lower bound 100. No exhaustive search or proof closes the gap. Has global optimality been proved? Answer yes or no. Give the maximum possible additive gap and the maximum ratio of this feasible cost to the unknown optimum.\nReturn only one JSON object. Required fields: optimality_proved (JSON string), additive_gap (JSON number), max_ratio (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "optimality_proved": "no",
+      "additive_gap": 4,
+      "max_ratio": 1.04
+    }
+  },
+  {
+    "id": "merge-code",
+    "category": "code",
+    "turns": [
+      "Write Python function merge_busy(intervals). Input is a list of integer [start,end] pairs with start<end. Return sorted list pairs merging strictly overlapping intervals; touching endpoints must remain separate. Do not mutate input. Empty input returns []. An invalid interval (start>=end) raises ValueError. No imports. Return only a JSON object with a code string containing the function, no Markdown."
+    ],
+    "code_check": "merge_busy"
+  },
+  {
+    "id": "apportion-code",
+    "category": "code",
+    "turns": [
+      "Write Python function apportion(total, weights). total is a nonnegative integer. weights is a list of positive integer weights. For a nonempty list, allocate exactly total units proportionally by largest remainder: floor each exact quota, then give remaining units to descending fractional remainders, breaking ties by lower original index. Use integer arithmetic. Return allocations in original order; do not mutate weights. Empty weights returns [] only for total=0; otherwise raise ValueError. Negative total or any nonpositive weight raises ValueError. No imports. Return only JSON with a code string containing the function."
+    ],
+    "code_check": "apportion"
+  },
+  {
+    "id": "alias-code",
+    "category": "code",
+    "turns": [
+      "Write Python function resolve_alias(mapping,key). Keys and values are strings. Follow mapping until the current key has no entry and return that terminal string. If a cycle is reachable, raise ValueError. An unrelated cycle must not cause failure. Do not mutate mapping. No imports. Return only JSON with a code string containing the function."
+    ],
+    "code_check": "resolve_alias"
+  },
+  {
+    "id": "window-code",
+    "category": "code",
+    "turns": [
+      "Write Python function window_counts(events,width). events is an unsorted list of integer timestamps; width is a positive integer. For each input timestamp t, count ALL input entries x with t-width < x <= t. Duplicates count separately, including duplicates later in input. Return counts in original order, do not mutate events. Empty input returns []. width<=0 raises ValueError. No imports. Return only JSON with a code string containing the function."
+    ],
+    "code_check": "window_counts"
+  },
+  {
+    "id": "direct-number",
+    "category": "direct",
+    "turns": [
+      "Compute 17*19. Return answer as a number. No extra fields.\nReturn only one JSON object. Required fields: answer (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "answer": 323
+    }
+  },
+  {
+    "id": "direct-format",
+    "category": "direct",
+    "turns": [
+      "Return the ISO date for 2 October 2026. No extra fields.\nReturn only one JSON object. Required fields: answer (JSON string). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "answer": "2026-10-02"
+    }
+  },
+  {
+    "id": "retain-rate",
+    "category": "direct",
+    "turns": [
+      "Remember for this session: unit price is 17 credits. Return only the JSON object {\"ack\":true}.",
+      "What is the cost of two units at the price I gave you? No extra fields.\nReturn only one JSON object. Required fields: answer (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "answer": 34
+    }
+  },
+  {
+    "id": "retain-revision",
+    "category": "direct",
+    "turns": [
+      "Remember for this session: the batch size is 12. Return only the JSON object {\"ack\":true}.",
+      "Correction: the batch size is 9. Use the corrected value. What is the batch size? No extra fields.\nReturn only one JSON object. Required fields: answer (JSON number). Match the requested labels exactly. No Markdown or tools."
+    ],
+    "expected": {
+      "answer": 9
+    }
+  }
+]
