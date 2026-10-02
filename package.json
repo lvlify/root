@@ -1,0 +1,26 @@
+{
+  "name": "@lvlify/root",
+  "version": "0.1.0",
+  "description": "Trace causes. Compare credible approaches. Choose what the evidence supports.",
+  "type": "module",
+  "main": "./hooks/opencode.mjs",
+  "exports": {
+    ".": "./hooks/opencode.mjs",
+    "./server": "./hooks/opencode.mjs"
+  },
+  "files": [
+    "skills/",
+    "hooks/context.cjs",
+    "hooks/opencode.mjs",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lvlify/root.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  }
+}

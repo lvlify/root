@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"require(require('node:path').join(process.env.PLUGIN_ROOT || process.env.COPILOT_PLUGIN_ROOT || process.env.CLAUDE_PLUGIN_ROOT, 'hooks', 'context.cjs')).emit('SessionStart')\"",
+            "timeout": 5,
+            "additionalContextLimit": 0
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"require(require('node:path').join(process.env.PLUGIN_ROOT || process.env.COPILOT_PLUGIN_ROOT || process.env.CLAUDE_PLUGIN_ROOT, 'hooks', 'context.cjs')).emit('SubagentStart')\"",
+            "timeout": 5,
+            "additionalContextLimit": 0
+          }
+        ]
+      }
+    ]
+  }
+}

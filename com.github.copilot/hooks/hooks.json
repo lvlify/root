@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "node -e \"require(require('node:path').join(process.env.PLUGIN_ROOT || process.env.COPILOT_PLUGIN_ROOT || process.env.CLAUDE_PLUGIN_ROOT, 'hooks', 'context.cjs')).emit('copilot')\"",
+        "powershell": "node -e \"require(require('node:path').join(process.env.PLUGIN_ROOT || process.env.COPILOT_PLUGIN_ROOT || process.env.CLAUDE_PLUGIN_ROOT, 'hooks', 'context.cjs')).emit('copilot')\"",
+        "timeoutSec": 5
+      }
+    ],
+    "subagentStart": [
+      {
+        "type": "command",
+        "bash": "node -e \"require(require('node:path').join(process.env.PLUGIN_ROOT || process.env.COPILOT_PLUGIN_ROOT || process.env.CLAUDE_PLUGIN_ROOT, 'hooks', 'context.cjs')).emit('copilot')\"",
+        "powershell": "node -e \"require(require('node:path').join(process.env.PLUGIN_ROOT || process.env.COPILOT_PLUGIN_ROOT || process.env.CLAUDE_PLUGIN_ROOT, 'hooks', 'context.cjs')).emit('copilot')\"",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}

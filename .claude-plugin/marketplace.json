@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "owner": {
+    "name": "lvlify"
+  },
+  "plugins": [
+    {
+      "name": "root",
+      "source": "./",
+      "description": "Trace causes. Compare credible approaches. Choose what the evidence supports."
+    }
+  ]
+}

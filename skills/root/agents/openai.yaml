@@ -1,0 +1,4 @@
+interface:
+  display_name: "root"
+  short_description: "Trace causes. Choose what the evidence supports."
+  default_prompt: "Use $root to choose the strongest supported approach for this goal and its constraints."

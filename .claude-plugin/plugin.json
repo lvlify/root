@@ -1,0 +1,12 @@
+{
+  "name": "root",
+  "version": "0.1.0",
+  "description": "Trace causes. Compare credible approaches. Choose what the evidence supports.",
+  "author": {
+    "name": "lvlify"
+  },
+  "homepage": "https://github.com/lvlify/root",
+  "repository": "https://github.com/lvlify/root",
+  "license": "MIT",
+  "hooks": "./hooks/claude.json"
+}
