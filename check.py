@@ -31,7 +31,7 @@ with tempfile.TemporaryDirectory(prefix="root-check-") as directory:
     generated = packaging.generated()
     for name, data in generated.items():
         assert (checkout / name).read_bytes() == data, f"Stale generated file: {name}"
-    names = set(packaging.COMMON) | set(generated) | {"package.py", "plugin.json"}
+    names = set(packaging.COMMON) | set(generated) | {"package.py", packaging.MANIFEST}
     names.update(name for files in packaging.FORMATS.values() for name in files)
     for name in names:
         destination = product / name

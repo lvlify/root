@@ -76,6 +76,9 @@ codex plugin marketplace add lvlify/root
 Open `/plugins` and install `root` from the `root` marketplace.
 Open `/hooks` and review and trust root's hooks. Enabled plugins do not run
 untrusted hooks. Local command hooks do not run under cloud orchestration.
+Root uses `.codex-plugin/plugin.json` because Codex CLI 0.160.0 skips hooks
+in portable Agent Plugins packages. Its plugin details should list
+`SessionStart (1), SubagentStart (1)`.
 [Codex packaging](https://developers.openai.com/plugins/build/plugins),
 [hook trust and execution](https://learn.chatgpt.com/docs/hooks).
 
@@ -111,7 +114,7 @@ python3 package.py --format cursor --output /tmp/root-cursor.zip
 On Windows, choose a ZIP path outside the checkout.
 Extract the archive's `root/` folder into `~/.cursor/plugins/local/`.
 Reload Cursor. Confirm root's rule is **Always Apply** in Customize.
-This package omits the portable manifest so Cursor uses its native rule format.
+This package contains Cursor's native manifest and always applied rule.
 Local plugin imports must be allowed by your organization.
 [Cursor plugin formats and installation](https://cursor.com/docs/plugins).
 
@@ -187,8 +190,9 @@ combined project instruction limit. Supply `python3 install.py print` to a custo
 worker or API session that does not inherit root through its host.
 
 **Verification status:** Paths and plugin contracts were researched from official
-documentation on 2026-10-01 and 2026-10-02. The runnable checks have not yet been executed for
-this version. Live loading, Windows behavior, and reasoning gains remain unverified.
+documentation on 2026-10-01 and 2026-10-02. Codex CLI 0.160.0's plugin reader
+detects both startup hooks in version 0.1.1. The runnable checks have not been
+executed. Fresh-session delivery, Windows behavior, and reasoning gains remain unverified.
 Root does not claim universal optimality or measured improvement.
 
 ## Update or remove
@@ -238,8 +242,9 @@ permitted startup instructions. No particular model or tool is required.
 Use a Git checkout for this workflow. Clean plugin archives contain runtime files
 and the native installer, not the package builder or checks.
 
-Edit `skills/root/SKILL.md` for behavior and `plugin.json` for package identity and
-version. Host files and the required Cursor rule derive from these two files.
+Edit `skills/root/SKILL.md` for behavior and `.codex-plugin/plugin.json` for
+package identity and version. Host files and the required Cursor rule derive
+from these two files.
 Do not edit generated files by hand.
 
 ```sh
@@ -255,10 +260,13 @@ agent settings or prove live client loading.
 GitHub Actions runs this same check on Linux, macOS, and Windows. The workflow
 has read-only repository access. It does not publish packages.
 
-Build a clean package with `python3 package.py --format agent --output /tmp/root.zip`.
-Formats are `agent`, `claude`, `cursor`, `copilot`, `gemini`, and `opencode`.
+Build a clean package with `python3 package.py --format codex --output /tmp/root.zip`.
+Formats are `codex`, `claude`, `cursor`, `copilot`, `gemini`, and `opencode`.
 The file list is explicit. Archives do not copy unrelated checkout files.
 Cursor exports use only the native manifest. Existing archives are not overwritten.
+Copilot uses `.plugin/plugin.json` to select its own hook format.
+The checkout has no root portable manifest because Codex CLI 0.160.0 would
+select it and skip startup hooks. All host manifests use the same skill body.
 
 Before a GitHub release, inspect `git diff --check` and the selected files.
 Run the check on Linux, macOS, and Windows before claiming those platforms were tested.

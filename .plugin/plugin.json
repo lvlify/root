@@ -9,5 +9,5 @@
   "repository": "https://github.com/lvlify/root",
   "license": "MIT",
   "skills": "./skills/",
-  "rules": "./rules/"
+  "hooks": "./com.github.copilot/hooks/hooks.json"
 }

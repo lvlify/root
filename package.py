@@ -12,15 +12,15 @@ import install
 
 
 ROOT = Path(__file__).resolve().parent
+MANIFEST = ".codex-plugin/plugin.json"
+IDENTITY = ("name", "version", "description", "author", "homepage", "repository", "license")
 COMMON = ("README.md", "LICENSE", "install.py", "skills/root/SKILL.md",
           "skills/root/agents/openai.yaml")
 FORMATS = {
-    "agent": ("plugin.json", "hooks/codex.json", "hooks/context.cjs",
-              "com.github.copilot/hooks/hooks.json"),
+    "codex": (MANIFEST, "hooks/codex.json", "hooks/context.cjs"),
     "claude": (".claude-plugin/plugin.json", "hooks/claude.json", "hooks/context.cjs"),
     "cursor": (".cursor-plugin/plugin.json", "rules/root.mdc"),
-    "copilot": ("plugin.json", "com.github.copilot/hooks/hooks.json", "hooks/context.cjs",
-                "hooks/codex.json"),
+    "copilot": (".plugin/plugin.json", "com.github.copilot/hooks/hooks.json", "hooks/context.cjs"),
     "gemini": ("gemini-extension.json",),
     "opencode": ("package.json", "hooks/opencode.mjs", "hooks/context.cjs"),
 }
@@ -38,12 +38,11 @@ def launcher(event):
 
 
 def generated():
-    manifest = json.loads((ROOT / "plugin.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / MANIFEST).read_text(encoding="utf-8"))
     if (manifest.get("name") != "root"
             or not re.fullmatch(r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)", manifest["version"])):
-        raise ValueError("plugin.json: expected root and a three-part release version")
-    identity = {key: manifest[key] for key in
-                ("name", "version", "description", "author", "homepage", "repository", "license")}
+        raise ValueError(f"{MANIFEST}: expected root and a three-part release version")
+    identity = {key: manifest[key] for key in IDENTITY}
     claude = {**identity, "hooks": "./hooks/claude.json"}
     claude_hooks = {}
     codex_hooks = {}
@@ -72,6 +71,8 @@ def generated():
                 "category": "Productivity"}],
         },
         ".cursor-plugin/plugin.json": {**identity, "skills": "./skills/", "rules": "./rules/"},
+        ".plugin/plugin.json": {**identity, "skills": "./skills/",
+                                "hooks": "./com.github.copilot/hooks/hooks.json"},
         "gemini-extension.json": {"name": "root", "version": manifest["version"],
                                   "contextFileName": "skills/root/SKILL.md"},
         "hooks/claude.json": {"hooks": claude_hooks},
@@ -96,7 +97,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sync", action="store_true", help="refresh generated files in this checkout")
     parser.add_argument("--check", action="store_true", help="report stale generated files without writing")
-    parser.add_argument("--format", choices=tuple(FORMATS), default="agent")
+    parser.add_argument("--format", choices=tuple(FORMATS), default="codex")
     parser.add_argument("--output", type=Path, help="write a new ZIP containing a root/ plugin directory")
     args = parser.parse_args()
     if not (args.sync or args.check or args.output):
@@ -119,7 +120,7 @@ def main():
             destination.parent.mkdir(parents=True, exist_ok=True)
             if not destination.exists() or destination.read_bytes() != data:
                 destination.write_bytes(data)
-        print("Generated host files from plugin.json and skills/root/SKILL.md.")
+        print(f"Generated host files from {MANIFEST} and skills/root/SKILL.md.")
     if args.output:
         output = args.output.expanduser().absolute()
         names = COMMON + FORMATS[args.format]

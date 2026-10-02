@@ -2,12 +2,17 @@
   "name": "root",
   "version": "0.1.1",
   "description": "Trace causes. Compare credible approaches. Choose what the evidence supports.",
-  "author": {
-    "name": "lvlify"
-  },
+  "author": { "name": "lvlify" },
   "homepage": "https://github.com/lvlify/root",
   "repository": "https://github.com/lvlify/root",
   "license": "MIT",
   "skills": "./skills/",
-  "rules": "./rules/"
+  "hooks": "./hooks/codex.json",
+  "interface": {
+    "displayName": "root",
+    "shortDescription": "Reason from the roots",
+    "developerName": "lvlify",
+    "category": "Productivity",
+    "defaultPrompt": "Apply root to this task."
+  }
 }
